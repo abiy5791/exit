@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "300601293313",
+    "project_id": "exit-b140e",
+    "storage_bucket": "exit-b140e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300601293313:android:cec8f38d9804f936a29e00",
+        "android_client_info": {
+          "package_name": "com.example.exit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdZp233s0NKmQ9oji4i2SS06-ZanhxyRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
