@@ -1,9 +1,7 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, avoid_print
 
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:exit/firebase_ref/references.dart';
 import 'package:get/get.dart';
-
-Reference get firebaseStorage => FirebaseStorage.instance.ref();
 
 class FirebaseStorageService extends GetxService {
   Future<String?> getImage(String? ImageName) async {
@@ -17,6 +15,7 @@ class FirebaseStorageService extends GetxService {
       var ImgUrl = await urlRef.getDownloadURL();
       return ImgUrl;
     } catch (e) {
+      print(e);
       return null;
     }
   }

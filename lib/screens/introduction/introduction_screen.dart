@@ -11,7 +11,7 @@ class IntroductionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(gradient: mainGradient(context)),
+        decoration: BoxDecoration(gradient: mainGradient()),
         alignment: Alignment.center,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
@@ -29,7 +29,10 @@ class IntroductionScreen extends StatelessWidget {
               Text(
                 "Welcome to Exit Exam Model Questions Practice App!",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.white),
               ),
               SizedBox(
                 height: 10,
@@ -37,18 +40,17 @@ class IntroductionScreen extends StatelessWidget {
               Text(
                 "Exit Exam Model Questions Practice App This app helps you prepare for your graduation exit exam in any subject. You can practice with model questions based on your syllabus. This app will boost your knowledge, skills, and confidence.",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 10),
+                style: TextStyle(fontSize: 10, color: Colors.white),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               GestureDetector(
-                onTap: () => Get.toNamed('/home'),
-                child: Icon(
-                  Icons.arrow_forward_outlined,
-                  size: 20,
-                ),
-              ),
+                  onTap: () => Get.toNamed('/home'),
+                  child: Image.asset(
+                    "assets/images/right.png",
+                    width: 50,
+                  )),
             ],
           ),
         ),

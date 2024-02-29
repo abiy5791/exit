@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:exit/controllers/My_zoom_drawer_controller.dart';
 import 'package:exit/controllers/question_papers/question_paper_controller.dart';
 import 'package:exit/screens/home/home_screen.dart';
 import 'package:exit/screens/introduction/introduction_screen.dart';
 import 'package:get/get.dart';
+import '../screens/login/login_screen.dart';
 import '../screens/splash/splash_screen.dart';
 
 class AppRoutes {
@@ -10,10 +12,15 @@ class AppRoutes {
         GetPage(name: "/", page: () => SplashScreen()),
         GetPage(name: "/introduction", page: () => IntroductionScreen()),
         GetPage(
-            name: "/home",
-            page: () => HomeScreen(),
-            binding: BindingsBuilder(() {
-              Get.put(QuestionPaperController());
-            }))
+          name: "/home",
+          page: () => HomeScreen(),
+          binding: BindingsBuilder(() {
+            Get.put(
+              QuestionPaperController(),
+            );
+            Get.put(MyZoomDrawerController());
+          }),
+        ),
+        GetPage(name: LoginScreen.routeName, page: () => LoginScreen()),
       ];
 }
