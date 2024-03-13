@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:exit/config/themes/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainButton extends StatelessWidget {
   final String btnText;
@@ -36,7 +38,10 @@ class MainButton extends StatelessWidget {
                     child: Text(
                       btnText,
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black),
+                          fontWeight: FontWeight.bold,
+                          color: Get.isDarkMode
+                              ? onSurfaceTextColor
+                              : Theme.of(context).primaryColor),
                     ),
                   ),
             ),

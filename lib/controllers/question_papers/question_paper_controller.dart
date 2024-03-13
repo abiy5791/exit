@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:exit/controllers/auth_controller.dart';
 import 'package:exit/firebase_ref/references.dart';
 import 'package:exit/models/question_paper_model.dart';
+import 'package:exit/screens/question/questions_screen.dart';
 import 'package:exit/services/firebase_storage_service.dart';
 import 'package:get/get.dart';
 
@@ -45,7 +46,11 @@ class QuestionPaperController extends GetxController {
     if (_authController.isLoggedIn()) {
       if (tryAgain) {
         Get.back();
-      } else {}
+        Get.toNamed(QuestionsScreen.routeName,
+            arguments: paper, preventDuplicates: false);
+      } else {
+        Get.toNamed(QuestionsScreen.routeName, arguments: paper);
+      }
     } else {
       _authController.showLoginAlertDialog();
     }

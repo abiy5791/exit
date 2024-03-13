@@ -31,6 +31,7 @@ dependencies:
   cached_network_image: ^3.3.1
   cloud_firestore: ^4.15.4
   cupertino_icons: ^1.0.2
+  easy_separator: ^1.0.1
   firebase_auth: ^4.17.4
   firebase_core: ^2.25.4
   firebase_storage: ^11.6.6
@@ -41,6 +42,7 @@ dependencies:
   get: ^4.6.6
   google_fonts: ^6.1.0
   google_sign_in: ^6.2.1
+  shimmer: ^3.0.0
   url_launcher: ^6.2.5
 
 dev_dependencies:
